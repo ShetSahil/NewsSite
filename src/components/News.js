@@ -42,7 +42,8 @@ export class News extends Component {
     }
     static propTypes={
       country: PropTypes.string,
-      pageSize:PropTypes.number
+      pageSize:PropTypes.number,
+      category: PropTypes.string
 
     }
     constructor(){
