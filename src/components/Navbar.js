@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import {Link} from "react-router-dom";
 
-export class Navbar extends Component {
-  render() {
+const Navbar=(props)=>{
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">Navbar</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,12 +26,13 @@ export class Navbar extends Component {
              
               
             </ul>
-           
+            <img src="https://cdn-icons-png.flaticon.com/512/6714/6714978.png" style={{height:'40px', width:'50px',marginLeft:'700px'}}  onClick={props.handleClick} alt="" srcset="" />
+
           </div>
         </div>
       </nav>
     )
-  }
+  
 }
 
 export default Navbar
