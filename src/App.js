@@ -9,6 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import { useState } from 'react';
+// import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 const App=()=> {
   const[progress,setProgress]=useState(10)
@@ -45,13 +46,14 @@ const App=()=> {
 
       <Switch>
         <Route exact path="/"><News setProgress={setProgress} mode={mode} key="general" pageSize={pageSize} country='in' category="general"/></Route>
-        <Route exact path="/business" ><News setProgress={setProgress} mode={mode} key="business" pageSize={pageSize} country='in' category="business"/></Route>
+        <Route exact path="/business"  ><News setProgress={setProgress} mode={mode} key="business" pageSize={pageSize} country='in' category="business"/></Route>
         <Route exact path="/entertainment"><News setProgress={setProgress} mode={mode} key="entertainment" pageSize={pageSize} country='in' category="entertainment"/></Route>
         <Route exact path="/general"><News setProgress={setProgress} mode={mode} key="general" pageSize={pageSize} country='in' category="general"/></Route>
         <Route exact path="/health"><News setProgress={setProgress} mode={mode} key="health" pageSize={pageSize} country='in' category="health"/></Route>
         <Route exact path="/science"><News setProgress={setProgress} mode={mode} key="science" pageSize={pageSize} country='in' category="science"/></Route>
         <Route exact path="/sports"><News setProgress={setProgress} mode={mode} key="sports" pageSize={pageSize} country='in' category="sports"/></Route>
         <Route exact path="/tehnology"><News setProgress={setProgress} mode={mode} key="tehnology" pageSize={pageSize} country='in' category="tehnology"/></Route>
+        {/* <Route exact path="/"  element={<Home />}  > */}
       </Switch>
 
     </Router>
